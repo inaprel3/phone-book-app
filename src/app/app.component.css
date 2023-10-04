@@ -1,0 +1,100 @@
+/*app.component.css*/
+/* Загальні стилі для всього додатку */
+body {
+  background-color: rgba(227, 197, 246, 0.9);; /* Світло фіолетовий фон */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Центрувати контент по вертикалі */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: rgba(227, 197, 246, 0.9); /* Світло фіолетовий фон */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тінь для контейнера */
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Відступ між текстом і текстом */
+.container h2 {
+  margin-bottom: 20px;
+}
+
+/* Відступ між текстом і кнопками */
+.container button {
+  margin-top: 20px;
+}
+
+/* Відступ між кнопками */
+.container button + button {
+  margin-left: 20px;
+}
+
+/* Заголовок інтерфейсу телефонної книги */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Стилі для форм додавання та видалення контактів */
+form {
+  margin: 20px 0;
+}
+
+/* Стилі для кнопок */
+button {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #303f9f;
+}
+
+/* Стилі для списку контактів */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Медіа-запити для розміру шрифтів */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 11px;
+  }
+}

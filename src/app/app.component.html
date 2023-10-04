@@ -1,0 +1,53 @@
+<!--app.component.html-->
+<div class="container">
+  <h2>Телефонна книга</h2>
+
+  <!-- Форма для додавання нового контакту -->
+  <form (submit)="addContact()">
+    <div class="form-group">
+      <label for="firstName">Ім'я:</label>
+      <input type="text" id="firstName" [(ngModel)]="newContact.firstName" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Прізвище:</label>
+      <input type="text" id="lastName" [(ngModel)]="newContact.lastName" name="lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Номер телефону:</label>
+      <input type="tel" id="phoneNumber" [(ngModel)]="newContact.phoneNumber" name="phoneNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" [(ngModel)]="newContact.email" name="email">
+    </div>
+
+    <button type="submit">Додати контакт</button>
+  </form>
+
+  <!-- Форма для видалення контакту -->
+  <form (submit)="deleteContact()">
+    <div class="form-group">
+      <label for="contactId">ID контакту для видалення:</label>
+      <input type="number" id="contactId" [(ngModel)]="contactIdToDelete" name="contactId" required>
+    </div>
+
+    <button type="submit">Видалити контакт</button>
+  </form>
+
+  <!-- Відображення списку контактів -->
+  <h3>Список контактів</h3>
+  <ul>
+    <li *ngFor="let contact of contacts">
+      {{ contact.firstName }} {{ contact.lastName }} ({{ contact.phoneNumber }})
+      <span *ngIf="contact.email"> - {{ contact.email }}</span>
+    </li>
+  </ul>
+  <ul>
+    <li>Контакт 1</li>
+    <li>Контакт 2</li>
+    <li>Контакт 3</li>
+  </ul>
+</div>
